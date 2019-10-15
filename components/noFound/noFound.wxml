@@ -1,0 +1,4 @@
+<view class="no-found-con">
+<image src="../../assets/images/commen/noFound.png" class="img"></image>
+<view>暂无信息</view>
+</view>

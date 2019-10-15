@@ -1,0 +1,85 @@
+/* pages/teacher/examDetail/examDetail.wxss */
+.con{
+    width: 94%;
+    margin: auto;
+    box-shadow: 5px 5px 3px #f8f8f8;
+}
+.con .detail{
+    width: 100%;
+}
+/*head*/
+.con .Head{
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #f8f8f8;
+}
+.con .Head .title{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    line-height: 20rpx;
+}
+.con .Head .button{
+    font-size: 0.8rem;
+    color: #fff;
+    letter-spacing: 1px;
+    background: rgb(115, 191, 238);
+    padding: 2rpx 20rpx;
+    margin: 10rpx 20rpx;
+}
+.con .section1{
+    width: 94%;
+    height: 100rpx;
+    margin: auto;
+    border-bottom: 1px solid #f8f8f8;
+}
+.con .section1 text{
+    line-height: 80rpx;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-right: 20rpx;
+}
+.con .section1 .tui-picker-detail{
+
+    line-height: 100rpx;
+    font-size: 0.9rem;
+}
+/*bank*/
+.bank{
+    width: 100%;
+}
+.bank .question{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #f8f8f8;
+    justify-content: space-between
+}
+.bank .question text{
+    font-size: 0.8rem;
+    line-height: 80rpx;
+    letter-spacing: 1px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+    margin-left: 20rpx;
+}
+.bank .question .remove{
+    font-size: 0.8rem;
+    line-height: 50rpx;
+    margin-top: 30rpx;
+    width: 100rpx;
+    text-align: center;
+    letter-spacing: 1px;
+    height: 50rpx;
+    margin-right: 10rpx;
+    color: #ffffff;
+    background: rgb(132, 209, 132);
+    margin-right: 20rpx;
+}

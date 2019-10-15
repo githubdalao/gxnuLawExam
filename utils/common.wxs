@@ -1,0 +1,19 @@
+// 格式化文字长度，溢出用...表示
+var formatTextLength = function (text, length) {
+  if (text.length > length){
+    return text.slice(0, length)+"...";
+  }else{
+    return text;
+  }
+}
+// 判断数组是否包括某个值
+var isInArray = function (value, arr) {
+  if (arr){
+    return arr.indexOf(value) >= 0;
+  }
+  return false;
+}
+module.exports = {
+  formatTextLength: formatTextLength,
+  isInArray: isInArray
+};

@@ -1,0 +1,8 @@
+.noneNotes{
+    width: 100%;
+    text-align: center;
+    padding: 100rpx 0;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    color: rgb(100, 100, 100)
+}

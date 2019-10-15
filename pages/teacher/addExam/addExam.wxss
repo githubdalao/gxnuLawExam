@@ -1,0 +1,17 @@
+/* pages/teacher/addExam/addExam.wxss */
+.con{
+    width: 94%;
+    box-shadow: 5px 5px 3px #f8f8f8;
+    margin: 20rpx auto;
+    padding-bottom: 20rpx;
+}
+button{
+    width: 250rpx;
+    margin: 60rpx auto 20rpx;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    height: 70rpx;
+    line-height: 70rpx;
+    background:  rgb(115, 191, 238);
+    color: #fff;
+}

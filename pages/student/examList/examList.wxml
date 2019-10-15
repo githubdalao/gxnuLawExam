@@ -1,0 +1,21 @@
+<view class="exam-con">
+    <van-toast id="van-toast" />
+    <block wx:for="{{examList}}" wx:key="id">
+        <view class="exam">
+            <view class="left">
+                <view class="title">{{item.title}}</view>
+                <view class="pubTime">开考时间：{{item.pubTime}}</view>
+            </view>
+            <van-button size="small" disabled="{{item.btnDisabled}}" type="{{item.btnType}}" data-examid="{{item.id}}"
+                bind:click="{{item.btnText == '开始考试'?'startExam':'toDetail'}}">{{item.btnText}}
+                </van-button>
+        </view>
+        <van-divider />
+    </block>
+    <van-dialog use-slot title="试卷密码" show="{{ dialogShow }}" show-cancel-button bind:confirm="onDialogSure">
+        <view class="examPwd-con">
+            <input value="{{examPwd}}" placeholder="请输入密码" bindinput="onInputChange" />
+        </view>
+    </van-dialog>
+    <no-found wx:if="{{examList.length == 0}}"></no-found>
+</view>

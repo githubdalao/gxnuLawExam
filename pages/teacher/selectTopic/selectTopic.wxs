@@ -1,0 +1,12 @@
+// 判断数组是否包括某个对象，paramName-判断参数名
+var isInArray = function (id, arr, paramName) {
+    for(var i = 0; i < arr.length; i++){
+        if (arr[i][paramName] == id){
+            return true;
+        }
+    }
+    return false;
+}
+module.exports = {
+    isInArray: isInArray
+};

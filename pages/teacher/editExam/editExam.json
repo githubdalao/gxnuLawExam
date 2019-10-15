@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-datetime-picker": "/vant-weapp/datetime-picker/index"
+  },
+  "navigationBarTitleText": "试卷编辑"
+}

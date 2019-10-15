@@ -1,0 +1,26 @@
+<wxs src="../../../utils/common.wxs" module="tools" />
+<view class="course-con">
+  <view class="user-info-con">
+    <view class="user-info">
+      <view class="head-img">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="username">{{userInfo.stuName}}</view>
+    </view>
+  </view>
+  <view class="course-list-con">
+    <view class="title">
+      <view class="content">
+        <view>我的课程</view>
+      </view>
+    </view>
+  </view>
+  <view style="background:#fff;">
+    <van-grid column-num="3">
+      <van-grid-item wx:for="{{courselist}}" wx:key="courseClassId" data-id="{{item.courseClassId}}"
+        bindtap="onCourseClick" icon="{{'/assets/images/student/stu-icon/icon-'+((index+1)%10)+'.png'}}"
+        text="{{tools.formatTextLength(item.courseClassName,5)}}">
+      </van-grid-item>
+    </van-grid>
+  </view>
+</view>

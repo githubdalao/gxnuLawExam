@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-divider": "/vant-weapp/divider/index",
+    "no-found": "/components/noFound/noFound"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "考试列表"
+}

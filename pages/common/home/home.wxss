@@ -1,0 +1,41 @@
+.img{
+    width: 100%;
+    margin: 100rpx 0 80rpx;
+    text-align: center;
+}
+.img .text{
+    margin-top: 20rpx;
+    font-size: 0.8rem;
+}
+.img image{
+    width: 210rpx;
+    height: 210rpx;
+    display: block;
+    margin: auto;
+}
+.getUderInfo{
+    width: 88%;
+    margin: auto;
+    border-top: 1px solid #cbcbcb;
+}
+.getUderInfo .title{
+    font-size: 0.9rem;
+    margin-top: 80rpx;
+    letter-spacing: 1px;
+}
+.getUderInfo .detail{
+    font-size: 0.8rem;
+    margin-top: 50rpx;
+    letter-spacing: 1px;
+    color: #cbcbcb;
+}
+.getUderInfo button{
+    width: 96%;
+    background: #1aac19;
+    height: 90rpx;
+    font-size: 1rem;
+    line-height: 90rpx;
+    color: #ffffff;
+    margin: 80rpx auto;
+    border-radius: 200rpx;
+}

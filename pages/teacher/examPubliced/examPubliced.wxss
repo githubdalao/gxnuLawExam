@@ -1,0 +1,38 @@
+/* pages/teacher/examPubliced/examPubliced.wxss */
+.con{
+    width: 100%;
+}
+.con .course{
+    text-align: center;
+    width: 100%;
+    margin: 10rpx auto;
+    box-shadow: 5px 5px 3px #f8f8f8;
+}
+.con .course .courseName{
+    font-size: 1rem;
+    line-height: 80rpx;
+    
+}
+.con .course .courseClassName{
+    font-size: 1rem;
+    line-height: 80rpx;
+    text-align: left;
+}
+.con .course .courseTest{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.con .course .courseTestName{
+    font-size: 0.8rem;
+    line-height: 80rpx;
+}
+.con .course .invite{
+    font-size: 0.8rem;
+    line-height: 80rpx;
+}
+.noPublic{
+    font-size: 0.6rem;
+    line-height: 80rpx;
+    color: rgb(128, 129, 130);
+}

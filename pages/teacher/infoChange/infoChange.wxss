@@ -1,0 +1,11 @@
+/* pages/teacher/infoChange/infoChange.wxss */
+button{
+    width: 300rpx;
+    margin: 20rpx auto;
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+    background: rgb(115, 191, 238);
+    color: #fff;
+    font-size: 1rem;
+}

@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<view class="cont">
+    <form class="login" bindsubmit="formSubmit">
+         <view class="input">
+            <text wx:if="{{numFalse}}" class="false">账号或密码不正确</text>
+            <text wx:if="{{numEmpty}}" class="empty">学号或密码不能为空</text>
+        </view>
+        <van-cell-group>
+            <van-field value="{{ username }}" name="num" required clearable label="账号" placeholder="请输入账号"/>
+            <van-field value="{{ password }}" name="pwd" type="password" label="密码" placeholder="请输入密码" required
+                border="{{ false }}" />
+        </van-cell-group>
+
+        <van-cell title="角色" required value="{{role}}" title-width="300rpx" value-class="text-align:left" bind:click="showPopup" />
+        <van-popup show="{{ show }}" position="bottom" custom-style="height: 55%;" bind:close="onClose">
+            <van-picker show-toolbar title="身份" columns="{{ columns }}" bind:cancel="onCancel"
+                bind:confirm="onConfirm" />
+        </van-popup>
+
+        <button formType="submit">登录</button>
+
+    </form>
+</view>

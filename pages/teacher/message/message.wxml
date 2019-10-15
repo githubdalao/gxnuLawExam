@@ -1,0 +1,12 @@
+<wxs src="../../../utils/common.wxs" module="tools" />
+<view class="con">
+    <van-toast id="van-toast" />
+    <van-cell-group>
+        <block wx:for="{{list}}" wx:key="id">
+            <van-cell title="{{item.sendName == null?'系统':item.sendName}}"
+                label="{{tools.formatTextLength(item.msg,15)}}" is-link
+                icon="{{item.isRead?'':'/assets/images/commen/reddot.png'}}" data-index="{{index}}" bindtap="toDetail"/>
+        </block>
+    </van-cell-group>
+    <no-found wx:if="{{list.length == 0}}"></no-found>
+</view>

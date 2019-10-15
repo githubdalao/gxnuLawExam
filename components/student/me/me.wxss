@@ -1,0 +1,36 @@
+/* components/student/me/me.wxss */
+.con {
+    width: 94%;
+    margin: auto;
+    box-shadow: 5px 5px 3px #f8f8f8;
+}
+
+.con .meList {
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 1px solid #f8f8f8;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.con .meList text {
+    line-height: 100rpx;
+    margin-left: 60rpx;
+    letter-spacing: 2rpx;
+    font-size: 0.8rem;
+}
+
+.con .meList view {
+    height: 80rpx;
+    float: right;
+    margin-top: 10rpx;
+    margin-right: 80rpx;
+    line-height: 100rpx;
+    font-size: 0.8rem;
+    letter-spacing: 1rpx;
+}
+.con .meList .arrow {
+    float: right;
+    margin-top: -10rpx;
+    margin-right: -10rpx;
+}

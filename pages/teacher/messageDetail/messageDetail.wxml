@@ -1,0 +1,6 @@
+<view class="con">
+    <van-panel title="{{info.sendName == null? '系统':info.sendName}}" desc="{{'接收人：'+info.acceptName}}"
+        status="{{info.isRead?'已读':'未读'}}">
+        <view class="content">{{info.msg}}</view>
+    </van-panel>
+</view>

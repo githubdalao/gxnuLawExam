@@ -1,0 +1,45 @@
+<view class="exam-con">
+    <view class="top">
+        <view>倒计时:{{restTime}}</view>
+        <van-button plain type="info" size="small" bind:click="examNavigate">试卷导航</van-button>
+    </view>
+    <swiper class="swiper-con" current="{{swiperCurrent}}">
+        <block wx:for="{{topicArr}}" wx:key="id" wx:for-index="topicIndex">
+            <swiper-item class="swiper-item-con">
+                <view class="topic-title">
+                    <text style="color: rgb(25, 137, 250);">第{{topicIndex+1}}题[{{ item.typeName }}]  </text>{{item.dry}}<text
+                        style="color: #999">({{item.score}}分)</text>
+                </view>
+                <!-- 复选框 -->
+                <block wx:if="{{item.type == 'multiple'}}">
+                    <van-checkbox-group value="{{ item.myAnswer }}" data-topicIndex="{{topicIndex}}"
+                        bind:change="onCheckboxChange">
+                        <van-checkbox custom-class="option" wx:for="{{ item.options }}" wx:for-item="option" wx:key="id"
+                            name="{{ option.optionLabel }}">
+                            {{option.optionLabel}}、{{ option.opDescrebe }}
+                        </van-checkbox>
+                    </van-checkbox-group>
+                </block>
+                <!-- 单选框 -->
+                <block wx:else>
+                    <van-radio-group value="{{ item.myAnswer[0] }}" data-topicIndex="{{topicIndex}}"
+                        bind:change="onRadioChange">
+                        <van-radio custom-class="option" wx:for="{{ item.options }}" wx:for-item="option" wx:key="id"
+                            name="{{ option.optionLabel }}">{{option.optionLabel}}、{{ option.opDescrebe }}</van-radio>
+                    </van-radio-group>
+                </block>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="end">
+        <van-button type="info" bind:click="onSubmitAnswer" size="small">提交</van-button>
+    </view>
+    <van-dialog id="van-dialog" />
+    <van-dialog use-slot show="{{ dialogShow }}" confirmButtonText="关闭导航" bind:confirm="onDialogClose">
+        <view class="navi-dialog-content">
+            <block wx:for="{{topicArr}}" wx:key="id">
+                <view class="navi {{item.isAnswer?'navi-active':''}}" data-index="{{index}}" bindtap="naviToTopic">{{index+1}}</view>
+            </block>
+        </view>
+    </van-dialog>
+</view>

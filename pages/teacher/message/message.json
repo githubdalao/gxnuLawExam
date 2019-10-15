@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "no-found": "/components/noFound/noFound"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "我的消息"
+}

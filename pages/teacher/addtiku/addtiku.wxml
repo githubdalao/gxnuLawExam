@@ -1,0 +1,24 @@
+<!--pages/teacher/addtiku/addtiku.wxml-->
+<view class="con">
+    <view class='search'>
+        <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+            bindconfirm='query'></input>
+        <van-icon class="image" name="search" bindtap="search" />
+        <text bindtap="concel">取消</text>
+    </view>
+    <form>
+        <view class="confirm">
+            <view class="btn" bindtap="confirmed">确定</view>
+        </view>
+        <view class="ques">
+            <checkbox-group bindchange="checkboxChange">
+                <view class="que" wx:for="{{single}}" wx:key="id">
+                    <view class="queTitle">
+                        {{item.dry}}
+                    </view>
+                    <checkbox value="{{index}}" checked="{{item.checked}}" />
+                </view>
+            </checkbox-group>
+        </view>
+    </form>
+</view>

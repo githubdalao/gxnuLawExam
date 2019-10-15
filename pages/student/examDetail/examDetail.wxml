@@ -1,0 +1,37 @@
+<!--pages/student/examDetail/examDetail.wxml-->
+<wxs src="./examDetail.wxs" module="tools" />
+<view class="exam-con">
+    <view class="top">
+        <view class="exam-detail">
+            <view>总得分：{{answerDetail.fraction}}分</view>
+            <view>错题数：{{answerDetail.wrongNum}}</view>
+            <view>总耗时：{{answerDetail.spendTime}}秒</view>
+            <view>提交状态：{{tools.getExamStatusText(answerDetail.examStatus)}}</view>
+        </view>
+        <van-button plain type="info" size="small" bind:click="examNavigate">试卷导航</van-button>
+    </view>
+    <swiper class="swiper-con" current="{{swiperCurrent}}">
+        <block wx:for="{{topicArr}}" wx:key="id" wx:for-index="topicIndex">
+            <swiper-item class="swiper-item-con">
+                <view class="topic-title">
+                    <text style="color: rgb(25, 137, 250);">第{{topicIndex+1}}题[{{ item.typeName }}]  </text>{{item.dry}}<text style="color: #999">({{item.score}}分)</text>
+                </view>
+                <view wx:for="{{ item.options }}" wx:for-item="option" wx:key="id">{{option.optionLabel}}、{{ option.opDescrebe }}</view>
+                <view class="topic-bottom">
+                    <view>我的答案：{{item.stuLabel}}</view>
+                    <view>正确答案：{{item.trueLabel}}</view>
+                    <view>解析：{{item.analyze==null?'无':item.analyze}}</view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <van-dialog id="van-dialog" />
+    <van-dialog use-slot show="{{ dialogShow }}" confirmButtonText="关闭导航" bind:confirm="onDialogClose">
+        <view class="navi-dialog-content">
+            <block wx:for="{{topicArr}}" wx:key="id">
+                <view class="navi {{item.isTrue?'navi-active':''}}" data-index="{{index}}" bindtap="naviToTopic">
+                    {{index+1}}</view>
+            </block>
+        </view>
+    </van-dialog>
+</view>

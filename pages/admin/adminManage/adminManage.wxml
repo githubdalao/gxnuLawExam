@@ -1,0 +1,8 @@
+<view class="con">
+    <view class='search'>
+        <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+            bindconfirm='query'></input>
+        <van-icon class="image" name="search" bindtap="search" />
+        <text bindtap="concel">取消</text>
+    </view>
+</view>

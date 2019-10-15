@@ -1,0 +1,28 @@
+/* components/admin/home/home.wxss */
+.home-con {
+  background: #ecedee;
+}
+.user-info-con {
+  background: #fafafa;
+  margin-bottom: 20rpx;
+}
+
+.user-info {
+  background: #fff;
+  text-align: center;
+  padding: 25rpx 0rpx;
+  width: 96%;
+  margin-left: 15rpx;
+}
+
+.user-info-con .user-info .head-img {
+  height: 100rpx;
+  width: 100rpx;
+  margin: 0 auto;
+}
+
+.user-info-con .user-info .username {
+  color: #999;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}

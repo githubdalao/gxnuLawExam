@@ -1,0 +1,21 @@
+<!--pages/teacher/examPubliced/examPubliced.wxml-->
+<view class="con">
+    <block wx:for="{{examPbliced}}">
+        <view class="course">
+            <view class="courseName">课程：{{item.courseCName}}</view>
+            <block wx:for="{{item.couseClassList}}">
+                <view class="courseClass">
+                    <view class="courseClassName">班级：{{item.courseClassName}}</view>
+                    <view wx:if="{{item.examList.length == 0}}" class="noPublic">该课程班级您还没有发布任何考试TAT</view>
+                    <block wx:for="{{item.examList}}">
+                        <view class="courseTest">
+                            <view class="courseTestName">{{item.title}}</view>
+                            <view class="invite">邀请码：{{item.enterCode}}</view>
+                        </view>
+                    </block>
+                </view>
+            </block>
+
+        </view>
+    </block>
+</view>

@@ -1,0 +1,22 @@
+<view class="con">
+    <view class='search'>
+        <input type='text' placeholder='姓名或学号' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+        <van-icon class="image" name="search" bindtap="query" />
+        <text bindtap="cancel">清除</text>
+    </view>
+    <scroll-view scroll-y class="list-con" style="height: {{scrollHeight}}px;" bindscrolltolower="onScrolltolower">
+        <view class="list-item" wx:for="{{list}}" wx:key="uid">
+            <view>{{item.stuName}}<text style="color: #999;">({{item.stuNum}})</text></view>
+            <view>
+                <van-icon class="v-icon" name="/assets/images/admin/unbind.png" size="20" data-uid="{{item.uid}}" bindtap="unbind"/>
+                <van-icon class="v-icon" name="/assets/images/admin/reset.png" size="20" data-uid="{{item.uid}}" bindtap="resetPwd"/>
+                <van-icon size="20" color="#69AFFB" name="delete" bindtap="delete" data-uid="{{item.uid}}"/>
+            </view>
+        </view>
+        <view class="end" hidden="{{scrollFlag}}">
+            没有更多了
+        </view>
+    </scroll-view>
+</view>
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />

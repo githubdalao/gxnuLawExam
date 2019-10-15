@@ -1,0 +1,58 @@
+<wxs src="../../../utils/common.wxs" module="tools" />
+<view class="con">
+    <form bindsubmit="formSubmit">
+        <textarea  name="dry" value="{{quesDetail.dry}}"  placeholder="题干"></textarea>
+        <van-field name="score" value="{{quesDetail.score}}" clearable label="分值" placeholder="分值(保留两位小数)" />
+        <van-field clearable label="标签" name="tag" value="{{quesDetail.tag}}" placeholder="标签--非必填" />
+        <van-radio-group value="{{ quesDetail.type }}" bind:change="onTypeSelect">
+            <text>提型</text>
+            <van-radio name="single" value="{{index}}">单选</van-radio>
+            <van-radio name="multiple" value="">多选</van-radio>
+            <van-radio name="judge" value="">判断</van-radio>
+        </van-radio-group>
+        <textarea name="analyze" value="{{quesDetail.analyze}}"  placeholder="解析--非必填"></textarea>
+        <view class="choise">
+            <text>选项</text>
+            <van-icon wx:if="{{quesDetail.type!='judge'}}" name="plus" bindtap="addOption" />
+        </view>
+        <!--单选-->
+        <view hidden="{{quesDetail.type!='single'}}" class="choises">
+            <radio-group bindchange="onRadioChange">
+                <view class="choi" wx:for="{{quesDetail.options}}" wx:key="index">
+                    <radio value="{{enNum[index]}}" checked="{{tools.isInArray(enNum[index], quesDetail.trueLabel)}}" />
+                    <text>{{enNum[index]}}</text>
+                    <input value="{{item.opDescrebe}}" data-index="{{index}}" bindinput="onOptionTextInput"></input>
+                    <van-icon name="cross" bindtap="deleteOption" data-index="{{index}}" />
+                </view>
+            </radio-group>
+        </view>
+        <!--多选-->
+        <view hidden="{{quesDetail.type!='multiple'}}" class="choises">
+            <checkbox-group bindchange="checkboxChange">
+                <label class="checkbox" wx:for="{{quesDetail.options}}" wx:key="index">
+                    <view class="choi">
+                        <checkbox value="{{enNum[index]}}"
+                            checked="{{tools.isInArray(enNum[index], quesDetail.trueLabel)}}" />
+                        <text>{{enNum[index]}}</text>
+                        <input value="{{item.opDescrebe}}" data-index="{{index}}" bindinput="onOptionTextInput"></input>
+                        <van-icon name="cross" bindtap="deleteOption" data-index="{{index}}" />
+                    </view>
+                </label>
+            </checkbox-group>
+        </view>
+        <!--判断-->
+        <view hidden="{{quesDetail.type!='judge'}}" class="choises">
+            <radio-group bindchange="onRadioChange" class="radio-group">
+                <radio class="radio" value="A" checked="{{tools.isInArray('A', quesDetail.trueLabel)}}">
+                    <text>A 对</text>
+                </radio>
+                <radio class="radio" value="B" checked="{{tools.isInArray('B', quesDetail.trueLabel)}}">
+                    <text>B 错</text>
+                </radio>
+            </radio-group>
+        </view>
+        <view class="note">注：请在每个选项前勾选正确答案</view>
+        <button formType="submit">提交</button>
+    </form>
+</view>
+<van-toast id="van-toast" />

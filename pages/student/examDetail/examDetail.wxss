@@ -1,0 +1,53 @@
+page {
+    height: 100%;
+}
+.exam-con {
+    height: 100%;
+    padding: 0rpx 20rpx;
+}
+.exam-con .top .exam-detail {
+    max-width: 70%;
+}
+.exam-con .top {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+    border-bottom: 1rpx solid #999;
+}
+.exam-con .swiper-con {
+    height: 80%;
+}
+.exam-con .swiper-con .swiper-item-con{
+    overflow: auto;
+}
+.exam-con .swiper-con .swiper-item-con .topic-title{
+    padding: 20rpx 0rpx;
+}
+.exam-con .swiper-con .swiper-item-con .option{
+    padding-top: 20rpx;
+}
+.exam-con .swiper-con .swiper-item-con .topic-bottom {
+    padding-top: 30rpx;
+}
+.exam-con .swiper-con .swiper-item-con .topic-bottom view {
+    padding-bottom: 10rpx;
+}
+.exam-con .navi-dialog-content{
+    max-height: 600rpx;
+    overflow: auto;
+    padding: 40rpx 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.exam-con .navi-dialog-content .navi{
+    padding: 10rpx 20rpx;
+    margin: 10rpx 10rpx;
+    background: red;
+    color: #fff;
+}
+.exam-con .navi-dialog-content .navi-active{
+    background: rgb(25, 137, 250);
+    color: #fff;
+}

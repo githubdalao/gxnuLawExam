@@ -1,0 +1,23 @@
+<!--components/student/me/me.wxml-->
+<view class="con">
+    <view class="meList">
+        <text>头像</text>
+        <view style="width:80rpx">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+    </view>
+    <view class="meList">
+        <text>姓名</text>
+        <view>{{userMessage.stuName}}</view>
+    </view>
+    <view class="meList">
+        <text>学号</text>
+        <view>{{userMessage.stuNum}}</view>
+    </view>
+    <!-- <view class="meList" bindtap="toUpdateInfo">
+        <text>修改个人信息</text>
+        <view class="arrow">
+            <van-icon name="arrow" />
+        </view>
+    </view> -->
+</view>

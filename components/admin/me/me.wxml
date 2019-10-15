@@ -1,0 +1,16 @@
+<view class="con">
+    <view class="meList">
+        <text>头像</text>
+        <view style="width:80rpx">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+    </view>
+    <view class="meList">
+        <text>姓名</text>
+        <view>{{userInfo.trueName}}</view>
+    </view>
+    <view class="meList">
+        <text>手机号</text>
+        <view>{{userInfo.tel}}</view>
+    </view>
+</view>

@@ -1,0 +1,67 @@
+<!--pages/teacher/examDetail/examDetail.wxml-->
+<view class="con">
+    <view class="detail">
+        <view class="Head">
+            <view class="title">试卷详情</view>
+            <view class="button" bindtap="saveExam">保存</view>
+            <view class="button">撤销</view>
+            <view class="button">发布</view>
+        </view>
+        <view>
+            <view class="section">
+                <picker mode="date" value="{{date}}" start="2019-09-01 00:00:00" bindchange="bindDateChange">
+                    <van-field value="{{detail.pubTime}}" name="firtime" clearable label="日期" placeholder="考试日期" />
+                </picker>
+            </view>
+            <view class="section">
+                <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+                    <van-field value="{{time}}" name="setime" clearable label="时间" placeholder="考试时间" />
+                </picker>
+            </view>
+            <van-field name="duration" value="{{detail.duration}}" clearable label="时长" placeholder="考试时长/分钟" />
+            <van-cell title="邀请码" value="{{detail.enterCode}}" />
+        </view>
+    </view>
+    <view class="single">
+        <view class="Head">
+            <view class="title">单选题</view>
+            <view class="button" bindtap="singleAdd">添加</view>
+        </view>
+        <view class="bank">
+            <block wx:for="{{detail.allTopics.single}}">
+                <view class="question">
+                    <text>{{item.dry}}</text>
+                    <view class="remove" data-id="{{item.id}}" bindtap="remove">移除</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="multiply">
+        <view class="Head">
+            <view class="title">多选题</view>
+            <view class="button" bindtap="multiplyAdd">添加</view>
+        </view>
+        <view class="bank">
+            <block wx:for="{{detail.allTopics.multiple}}">
+                <view class="question">
+                    <text>{{item.dry}}</text>
+                    <view class="remove">移除</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="judge">
+        <view class="Head">
+            <view class="title">判断题</view>
+            <view class="button" bindtap="judgeAdd">添加</view>
+        </view>
+        <view class="bank">
+            <block wx:for="{{detail.allTopics.judge}}">
+                <view class="question">
+                    <text>{{item.dry}}</text>
+                    <view class="remove">移除</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

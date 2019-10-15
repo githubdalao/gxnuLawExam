@@ -1,0 +1,69 @@
+/* components/teacher/exam/exam.wxss */
+.addExam{
+    margin: 20rpx auto;
+    width: 94%;
+    height: 100rpx;
+    box-shadow: 5px 5px 3px #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.addExam text{
+    line-height: 100rpx;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-left: 20rpx;
+}
+.main{
+    width: 96%;
+    margin: auto;
+    box-shadow: 5px 5px 3px #f8f8f8;
+}
+.ques .que{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #f8f8f8;
+    justify-content: space-between
+}
+.ques .que .queTitle{
+    font-size: 0.8rem;
+    line-height: 80rpx;
+    letter-spacing: 1px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+}
+.que .delect{
+    font-size: 0.8rem;
+    line-height: 50rpx;
+    margin-top: 20rpx;
+    width: 100rpx;
+    text-align: center;
+    letter-spacing: 1px;
+    height: 50rpx;
+   margin-right: 10rpx;
+   color: #ffffff;
+   background: rgb(233, 51, 51);
+}
+.que .enter{
+    font-size: 0.8rem;
+    line-height: 50rpx;
+    margin-top: 20rpx;
+    width: 100rpx;
+    text-align: center;
+    letter-spacing: 1px;
+    height: 50rpx;
+   color: #ffffff;
+   background: rgb(115, 191, 238);
+}
+.but{
+    display: flex;
+    flex-direction: row;
+}
+van-tag{
+    margin-top: 20rpx;
+    margin-right: 10rpx;
+}

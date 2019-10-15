@@ -1,0 +1,80 @@
+/* pages/teacher/editQues/editQues.wxss */
+van-radio-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20rpx 0;
+}
+textarea{
+    width: 94%;
+    margin: auto;
+    border: 1px solid #f8f8f8;
+    height: 200rpx;
+}
+
+text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-left: 10rpx;
+}
+
+.choise {
+    margin: auto;
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.choise text{
+    line-height: 100rpx;
+}
+.choise van-icon{
+    margin-top: 25rpx;
+    margin-right: 30rpx;
+}
+.choises{
+    width: 94%;
+    margin: auto;
+    
+}
+.choises .choi{
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60rpx;
+}
+.choises .choi text{
+    line-height: 60rpx;
+}
+.choises .choi input{
+    border: 1px solid #000;
+    height: 60rpx;
+    width: 400rpx;
+}
+.choises .choi van-icon{
+    margin-top: 10rpx;
+}
+.note{
+    width: 100%;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    color: #4b4b4b;
+    margin: 20rpx 20rpx;
+}
+button {
+
+    width: 30%;
+    margin: 50rpx auto;
+    height: 70rpx;
+    font-size: 0.8rem;
+    line-height: 70repx;
+    background: rgb(115, 191, 238);
+    color: #fff;
+}
+.radio-group{
+    width: 100%;
+}
+.radio-group .radio{
+    margin-left: 120rpx;
+}

@@ -1,0 +1,81 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.0",
+	"appid": "wx9122c23c93a80f7c",
+	"projectname": "examTest",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/student/startExam/startExam",
+					"pathName": "pages/student/startExam/startExam",
+					"query": "examId=25",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacher/editQues/editQues",
+					"pathName": "pages/teacher/editQues/editQues",
+					"query": "coursId=12&editId=33",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/teacher/editExam/editExam",
+					"pathName": "pages/teacher/editExam/editExam",
+					"query": "id=25",
+					"scene": null
+				}
+			]
+		}
+	}
+}

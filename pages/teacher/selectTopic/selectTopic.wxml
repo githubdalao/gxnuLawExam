@@ -1,0 +1,73 @@
+<wxs src="./selectTopic.wxs" module="tools" />
+<view class="con">
+    <view class='search'>
+        <input type='text' placeholder='题干或标签' confirm-type='search' value="{{getListParam.search}}" bindinput='inputBind'
+            bindconfirm='getList'></input>
+        <van-icon class="image" name="search" bindtap="getList" />
+        <text bindtap="cancelSearch">取消</text>
+    </view>
+    <van-collapse value="{{ activeName }}" bind:change="onCollapse" accordion>
+        <van-collapse-item title="单选" name="1">
+            <view class="ques">
+                <block wx:for="{{single}}" wx:key="id">
+                    <view class="que">
+                        <view class="queTitle">
+                            {{item.dry}}
+                        </view>
+                        <view class="but">
+                            <view hidden="{{tools.isInArray(item.id, selSingle, 'id')}}" data-toSel="{{true}}" class="edit noSel" data-index="{{index}}" data-type="single" bindtap="onSelectTopic">
+                                选择
+                            </view>
+                            <view hidden="{{!tools.isInArray(item.id, selSingle, 'id')}}"  data-toSel="{{fasle}}" class="edit" data-index="{{index}}" data-type="single"
+                                bindtap="onSelectTopic">
+                                已选
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-collapse-item>
+        <van-collapse-item title="多选" name="2">
+            <view class="ques">
+                <block wx:for="{{multiple}}" wx:key="id">
+                    <view class="que">
+                        <view class="queTitle">
+                            {{item.dry}}
+                        </view>
+                        <view class="but">
+                            <view hidden="{{tools.isInArray(item.id, selMultiple, 'id')}}" data-toSel="{{true}}" class="edit noSel" data-index="{{index}}" data-type="multiple" bindtap="onSelectTopic">
+                                选择
+                            </view>
+                            <view hidden="{{!tools.isInArray(item.id, selMultiple, 'id')}}" data-toSel="{{fasle}}" class="edit" data-index="{{index}}"
+                                data-type="multiple" bindtap="onSelectTopic">
+                                已选
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-collapse-item>
+        <van-collapse-item title="判断" name="3">
+            <view class="ques">
+                <block wx:for="{{judge}}" wx:key="id">
+                    <view class="que">
+                        <view class="queTitle">
+                            {{item.dry}}
+                        </view>
+                        <view class="but">
+                            <view hidden="{{tools.isInArray(item.id, selJudge, 'id')}}" data-toSel="{{true}}" class="edit noSel" data-index="{{index}}" data-type="judge" bindtap="onSelectTopic">
+                                选择
+                            </view>
+                            <view hidden="{{!tools.isInArray(item.id, selJudge, 'id')}}" data-toSel="{{fasle}}" class="edit" data-index="{{index}}" data-type="judge" bindtap="onSelectTopic">
+                                已选
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-collapse-item>
+    </van-collapse>
+    <view class="add">
+        <view class="addTitle" bindtap="onBack">保存返回</view>
+    </view>
+</view>

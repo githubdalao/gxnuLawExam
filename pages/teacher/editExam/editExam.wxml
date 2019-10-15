@@ -1,0 +1,70 @@
+<view class="con">
+    <form bindsubmit="formSubmit">
+        <view class="btns">
+            <button formType="submit" data-status="0" type="primary" size="mini" plain="{{true}}" disabled="{{examDetail.status != 0}}" > 保存 </button>
+            <button formType="submit" data-status="1" type="primary" size="mini" plain="{{true}}" disabled="{{examDetail.status == 1}}" > 发布 </button>
+            <button formType="submit" data-status="0" type="primary" size="mini" plain="{{true}}" disabled="{{examDetail.status != 1}}" > 撤销 </button>
+        </view>
+        <van-cell-group>
+            <van-field name="title" value="{{examDetail.title}}" required clearable label="名称" placeholder="请输入考试名称" />
+            <van-cell title="开考时间" required value="{{examDetail.pubTime}}" title-width="200rpx" value-class="text-align:left"  bind:click="showPopup"
+            />
+            <van-popup show="{{ datePickerShow }}" position="bottom" bind:close="closePopup"  custom-style="height: 55%;">
+                <van-datetime-picker  show-toolb data-type="datetime" loading="{{ loading }}" value="{{ currentTime }}" bind:cancel="onDataCancel"
+                    min-date="{{ minDate }}" bind:input="onDateInput"  bind:confirm="onDataConfirm" />
+            </van-popup>
+            <van-cell title="结束时间" required value="{{examDetail.endTime}}" title-width="200rpx" value-class="text-align:left"  bind:click="showEndPopup"
+            />
+            <van-popup show="{{ endTiemPick }}" position="bottom" bind:close="closeEndPopup"  custom-style="height: 55%;">
+                <van-datetime-picker  show-toolb data-type="datetime" loading="{{ loading }}" value="{{ currentTime }}" bind:cancel="cencelEndPopup"
+                    min-date="{{ minDate }}" bind:input="onDateEnd"  bind:confirm="onEndConfirm" />
+            </van-popup>
+            <van-field name="duration" value="{{examDetail.duration}}" required clearable label="时长" placeholder="单位：分钟" />
+            <van-cell title="密码" value="{{examDetail.enterCode}}" title-width="200rpx" value-class="text-align:left"/>
+        </van-cell-group>
+        <view class="topic-title">
+            <view>题目集合</view>
+            <van-icon name="plus" color="rgb(105, 175, 251)" bindtap="addTopic"/>
+        </view>
+        <view class="topic-con" wx:if="{{examDetail.allTopics.single.length != 0}}">
+            <view class="Head">
+                <view class="title">单选题</view>
+            </view>
+            <view class="bank">
+                <block wx:for="{{examDetail.allTopics.single}}" wx:key="id">
+                    <view class="question">
+                        <text>{{item.dry}}</text>
+                        <van-icon name="close" color="rgb(105, 175, 251)" data-type="single" data-index="{{index}}" bindtap="deleteTopic"/>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="topic-con" wx:if="{{examDetail.allTopics.multiple.length != 0}}">
+            <view class="Head">
+                <view class="title">多选题</view>
+            </view>
+            <view class="bank">
+                <block wx:for="{{examDetail.allTopics.multiple}}" wx:key="id">
+                    <view class="question">
+                        <text>{{item.dry}}</text>
+                        <van-icon name="close" color="rgb(105, 175, 251)" data-type="multiple" data-index="{{index}}" bindtap="deleteTopic"/>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="topic-con" wx:if="{{examDetail.allTopics.judge.length != 0}}">
+            <view class="Head">
+                <view class="title">判断题</view>
+            </view>
+            <view class="bank">
+                <block wx:for="{{examDetail.allTopics.judge}}" wx:key="id">
+                    <view class="question">
+                        <text>{{item.dry}}</text>
+                        <van-icon name="close" color="rgb(105, 175, 251)" data-type="judge" data-index="{{index}}" bindtap="deleteTopic"/>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </form>
+</view>
+<van-toast id="van-toast" />

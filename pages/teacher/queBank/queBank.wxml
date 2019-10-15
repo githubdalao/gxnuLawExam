@@ -1,0 +1,71 @@
+<!--pages/teacher/queBank/queBank.wxml-->
+<view class="con">
+    <view class='search'>
+        <input type='text' placeholder='题干或标签' confirm-type='search' value="{{getListParam.search}}" bindinput='inputBind'
+            bindconfirm='getList'></input>
+        <van-icon class="image" name="search" bindtap="getList" />
+        <text bindtap="cancelSearch">取消</text>
+    </view>
+    <van-collapse value="{{ activeName }}" bind:change="onCollapse" accordion>
+        <van-collapse-item title="单选" name="1">
+            <view class="ques">
+                <block wx:for="{{single}}" wx:for-index="idx" wx:for-item="single" wx:key="id">
+                    <view class="que">
+                        <view class="queTitle">
+                            {{single.dry}}
+                        </view>
+                        <view class="but">
+                            <view class="edit" data-id="{{single.id}}" bindtap="edit">
+                                修改
+                            </view>
+                            <view data-id="{{single.id}}" bindtap="delect" class="delect">
+                                删除
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-collapse-item>
+        <van-collapse-item  title="多选" name="2">
+            <view class="ques">
+                <block wx:for="{{multiple}}" wx:for-index="idx" wx:for-item="multiple" wx:key="id">
+                    <view class="que">
+                        <view class="queTitle">
+                            {{multiple.dry}}
+                        </view>
+                        <view class="but">
+                            <view class="edit" data-id="{{multiple.id}}" bindtap="edit">
+                                修改
+                            </view>
+                            <view data-id="{{multiple.id}}" bindtap="delect" class="delect">
+                                删除
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-collapse-item>
+        <van-collapse-item  title="判断" name="3">
+            <view class="ques">
+                <block wx:for="{{judge}}" wx:for-index="idx" wx:for-item="judge" wx:key="id">
+                    <view class="que">
+                        <view class="queTitle">
+                            {{judge.dry}}
+                        </view>
+                        <view class="but">
+                            <view class="edit" data-id="{{judge.id}}" bindtap="edit">
+                                修改
+                            </view>
+                            <view data-id="{{judge.id}}" bindtap="delect" class="delect">
+                                删除
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </van-collapse-item>
+    </van-collapse>
+    <view class="add">
+        <view class="addTitle" bindtap="add">添加题目</view>
+    </view>
+</view>

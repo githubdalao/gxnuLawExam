@@ -1,0 +1,19 @@
+<!--pages/student/updateInfo/updateInfo.wxml-->
+<view class="con">
+    <form bindsubmit="formSubmit">
+        <van-cell title="性别" value="{{formContent.sex}}" title-width="220rpx" value-class="text-align:left"
+            bind:click="onShowSex" placeholder="请选择性别" />
+        <van-popup show="{{ showSex }}" position="bottom" custom-style="height: 55%;" bind:close="onSexClose">
+            <van-picker show-toolbar title="性别" columns="{{ sexColumns }}" bind:cancel="onSexClose"
+                bind:confirm="onSexConfirm" />
+        </van-popup>
+        <van-field value="{{formContent.tel}}" name="tel" clearable label="手机" placeholder="手机" />
+        <van-field value="{{formContent.grade}}" name="grade" clearable label="年级" placeholder="年级" />
+        <van-field value="{{formContent.major}}" name="major" clearable label="专业" placeholder="专业" />
+        <van-field value="{{formContent.college}}" name="college" clearable label="学院" placeholder="学院" />
+        <view class="btn-con">
+            <button formType="submit" type="primary" class="btn-style">确认修改</button>
+        </view>
+    </form>
+
+</view>

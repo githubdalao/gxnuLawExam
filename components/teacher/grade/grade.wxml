@@ -1,0 +1,17 @@
+<!--components/teacher/grade/grade.wxml-->
+<view class="con">
+    <van-collapse value="{{ activeName }}" bind:change="onCollapse" accordion>
+        <van-collapse-item title="高数" name="1">
+            <view class="test">
+                <view>第一章 第一单元测试</view>
+                <view>进入</view>
+            </view>
+        </van-collapse-item>
+        <van-collapse-item title="法学" name="2">
+            网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+        </van-collapse-item>
+        <van-collapse-item title="马基" name="3">
+            线上拓客，随时预约，贴心顺手的开单收银
+        </van-collapse-item>
+    </van-collapse>
+</view>

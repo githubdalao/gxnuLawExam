@@ -1,0 +1,22 @@
+<!--components/admin/home/home.wxml-->
+<view class="home-con">
+    <view class="user-info-con">
+        <view class="user-info">
+            <view class="head-img">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <text class="username">{{userInfo.trueName}}</text>
+        </view>
+    </view>
+    <van-grid column-num="1">
+        <!-- <navigator url="/pages/admin/adminManage/adminManage" hover-class="navigator-hover">
+            <van-grid-item icon="manager-o" text="账号管理" />
+        </navigator> -->
+        <navigator url="/pages/admin/studentManage/studentManage" hover-class="navigator-hover">
+            <van-grid-item icon="contact" text="学生管理" />
+        </navigator>
+        <navigator url="/pages/admin/teacherManage/teacherManage" hover-class="navigator-hover">
+            <van-grid-item icon="user-o" text="教师管理" />
+        </navigator>
+    </van-grid>
+</view>

@@ -1,0 +1,27 @@
+.exam-con {
+    padding: 20rpx;
+}
+.exam-con .exam {
+    height: 110rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rpx 20rpx;
+}
+.exam-con .exam .left{
+    max-width: 420rpx;
+}
+.exam-con .exam .left .title {
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+    overflow:hidden;
+}
+.exam-con .exam .left .pubTime{
+    font-size: 30rpx;
+    color: #9999;
+    margin-top: 10rpx;
+}
+.examPwd-con {
+    padding: 40rpx;
+}

@@ -1,0 +1,48 @@
+page {
+    height: 100%;
+}
+.exam-con {
+    height: 100%;
+    padding: 0rpx 20rpx;
+}
+.exam-con .top {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exam-con .swiper-con {
+    height: 80%;
+}
+.exam-con .swiper-con .swiper-item-con{
+    overflow: auto;
+}
+.exam-con .swiper-con .swiper-item-con .topic-title{
+    padding: 20rpx 0rpx;
+}
+.exam-con .swiper-con .swiper-item-con .option{
+    margin-top: 20rpx;
+}
+.exam-con .navi-dialog-content{
+    max-height: 600rpx;
+    overflow: auto;
+    padding: 40rpx 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.exam-con .navi-dialog-content .navi{
+    padding: 10rpx 20rpx;
+    border: 1rpx solid rgb(25, 137, 250);
+    color: rgb(25, 137, 250);
+    margin: 10rpx 10rpx;
+}
+.exam-con .navi-dialog-content .navi-active{
+    border: none;
+    background: rgb(25, 137, 250);
+    color: #fff;
+}
+.exam-con .end {
+    height: 10%;
+    padding-top: 2%;
+    text-align: center;
+}

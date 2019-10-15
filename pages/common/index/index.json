@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "teacher-exam": "/components/teacher/exam/exam",
+    "teacher-grade": "/components/teacher/grade/grade",
+    "teacher-me": "/components/teacher/me/me",
+    "teacher-paper": "/components/teacher/paper/paper",
+    "student-grade": "/components/student/grade/grade",
+    "student-me": "/components/student/me/me",
+    "student-course": "/components/student/course/course",
+    "admin-home": "/components/admin/home/home",
+    "admin-me": "/components/admin/me/me"
+  },
+  "navigationBarTitleText": "加载中...",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

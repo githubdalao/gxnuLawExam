@@ -1,0 +1,84 @@
+/* pages/teacher/addtiku/addtiku.wxss */
+.con {
+    width: 94%;
+    margin: auto;
+    box-shadow: 5px 5px 3px #f8f8f8;
+}
+.con .confirm{
+    width: 100%;
+    height: 60rpx;
+    margin: 20rpx auto;
+    padding: 10rpx 0;
+    border-bottom: 1px solid #f8f8f8;
+}
+.con .confirm .btn{
+    line-height: 60rpx;
+    float: right;
+    font-size: 0.9rem;
+    line-height: 60rpx;
+    color: #fff;
+    background: rgb(132, 209, 132);
+    padding: 0 20rpx;
+    margin-right: 20rpx;
+}
+.con .ques {
+    width: 100%;
+}
+
+.con .ques .que {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #f8f8f8;
+    justify-content: space-between
+}
+
+.con .ques .que .queTitle {
+    font-size: 0.8rem;
+    line-height: 80rpx;
+    letter-spacing: 1px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+}
+.con .ques .que checkbox{
+    margin-top: 30rpx;
+}
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70rpx;
+    background-color: whitesmoke;
+    border: 1rpx solid whitesmoke;
+    border-radius: 5rpx;
+    margin: 10rpx auto 20rpx;
+
+}
+
+/* 搜索框提示文字样式 */
+.search input {
+    font-size: 27rpx;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 30rpx;
+    width: 80%;
+}
+
+/* 搜索框小图标 */
+.search .image {
+    width: 40rpx;
+    height: 40rpx;
+    padding: 20rpx;
+}
+.search text{
+    font-size: 0.7rem;
+    width: 70rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    background: #fff;
+     padding: 0 20rpx;
+}

@@ -1,0 +1,42 @@
+<!--pages/teacher/addExam/addExam.wxml-->
+<view class="con">
+    <form bindsubmit="formSubmit">
+        <van-cell title="课程" value="{{course}}" title-width="300rpx" value-class="text-align:left" bind:click="showCoursePopup"
+            placeholder="所属课程" />
+        <van-popup show="{{ showCourse }}" position="bottom" custom-style="height: 55%;" bind:close="onCourseClose">
+            <van-picker show-toolbar title="所属课程" columns="{{ CourseColumns }}" bind:cancel="onCourseCancel"
+                bind:confirm="onCourseConfirm" />
+        </van-popup>
+        <van-cell title="班级" value="{{class}}" title-width="300rpx" value-class="text-align:left" bind:click="showClassPopup"
+            placeholder="考试班级" />
+        <van-popup show="{{ showClass }}" position="bottom" custom-style="height: 55%;" bind:close="onClassClose">
+            <van-picker show-toolbar title="考试班级" columns="{{ Classcolumns }}" bind:cancel="onClassCancel"
+                bind:confirm="onClassConfirm" />
+        </van-popup>
+        <van-field value="{{examName}}" name="title" clearable label="考试" placeholder="考试名称" />
+        <view class="section">
+            <picker mode="date" value="{{date}}" start="2019-09-01" bindchange="bindDateChange">
+                <van-field value="{{date}}" name="firtime" clearable label="开考日期" placeholder="开考日期" />
+            </picker>
+        </view>
+        <view class="section">
+            <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+                <van-field value="{{time}}" name="setime" clearable label="开考时间" placeholder="开考时间" />
+            </picker>
+        </view>
+        <view class="section">
+            <picker mode="date" value="{{enddate}}" start="2019-09-01" bindchange="bindEndDateChange">
+                <van-field value="{{enddate}}" name="endfirsttime" clearable label="结束日期" placeholder="将限制学生进入考试日期" />
+            </picker>
+        </view>
+        <view class="section">
+            <picker mode="time" value="{{endtime}}" start="00:00" end="23:59" bindchange="bindEndTimeChange">
+                <van-field value="{{endtime}}" name="endsettime" clearable label="结束时间" placeholder="将限制学生进入考试的时间" />
+            </picker>
+        </view>
+        <van-field name="duration" value="{{examName}}" clearable label="时长" placeholder="考试时长/分钟" />
+
+        <button formType="submit" >添加试卷</button>
+    </form>
+
+</view>

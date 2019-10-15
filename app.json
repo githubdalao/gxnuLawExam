@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/common/home/home",
+    "pages/common/index/index",
+    "pages/teacher/addExam/addExam",
+    "pages/teacher/queBank/queBank",
+    "pages/common/login/login",
+    "pages/example/example",
+    "pages/teacher/examDetail/examDetail",
+    "pages/teacher/classList/classList",
+    "pages/student/examList/examList",
+    "pages/student/startExam/startExam",
+    "pages/student/examDetail/examDetail",
+    "pages/student/updateInfo/updateInfo",
+    "pages/admin/studentManage/studentManage",
+    "pages/admin/teacherManage/teacherManage",
+    "pages/teacher/editAddQues/editAddQues",
+    "pages/admin/adminManage/adminManage",
+    "pages/teacher/editExam/editExam",
+    "pages/teacher/selectTopic/selectTopic",
+    "pages/teacher/examPubliced/examPubliced",
+    "pages/teacher/infoChange/infoChange",
+    "pages/teacher/message/message",
+    "pages/teacher/messageDetail/messageDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-tabbar": "/vant-weapp/tabbar/index",
+    "van-tabbar-item": "/vant-weapp/tabbar-item/index",
+    "van-icon": "/vant-weapp/icon/index",
+    "van-button": "/vant-weapp/button/index",
+    "van-field": "/vant-weapp/field/index",
+    "van-picker": "/vant-weapp/picker/index",
+    "van-popup": "/vant-weapp/popup/index",
+    "van-cell": "/vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-collapse": "/vant-weapp/collapse/index",
+    "van-collapse-item": "/vant-weapp/collapse-item/index",
+    "van-tag": "/vant-weapp/tag/index",
+    "van-dialog": "/vant-weapp/dialog/index",
+    "van-radio": "/vant-weapp/radio/index",
+    "van-radio-group": "/vant-weapp/radio-group/index",
+    "van-toast": "/vant-weapp/toast/index",
+    "van-search": "/vant-weapp/search/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

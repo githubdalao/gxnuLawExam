@@ -1,0 +1,8 @@
+/* pages/student/updateInfo/updateInfo.wxss */
+.btn-con {
+    text-align: center;
+}
+.btn-style{
+    width: 90%;
+    margin-top: 100rpx;
+}

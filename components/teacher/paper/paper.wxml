@@ -1,0 +1,14 @@
+<!--components/teacher/paper/paper.wxml-->
+<view class="con">
+    <view wx:if="{{coueseList.length == 0}}" class="noneNotes">
+        您暂时没有添加任何课程 TAT
+    </view>
+    <block wx:for="{{coueseList}}" wx:key="courseId" wx:for-index="idx" wx:for-item="course">
+        <view class="classList">
+            <text>{{course.courseCName}}</text>
+            <view class="button" data-id="{{course.courseId}}" bindtap='enter'>进入</view>
+        </view>
+
+    </block>
+
+</view>

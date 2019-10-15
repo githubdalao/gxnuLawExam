@@ -1,0 +1,41 @@
+<!--components/teacher/exam/exam.wxml-->
+<view class="addExam" bindtap="addExam">
+    <text>添加考试</text>
+    <van-icon name="plus" size="1.2rem" color="rgb(115, 191, 238)" custom-style="padding:28rpx" />
+</view>
+<view class="main">
+    <view wx:if="{{exmas.length == 0}}" class="noneNotes">
+        您暂时没有创建任何试卷 TAT
+    </view>
+    <van-collapse value="{{ activeName }}" bind:change="onCollapse" accordion>
+        <block wx:for="{{exmas}}" wx:key="courseId" wx:for-index="idx">
+            <van-collapse-item title="{{item.courseCName}}" name="{{idx}}">
+                <block wx:for="{{item.couseClassList}}" wx:key="courseClassId">
+                    <view class="className">
+                        {{item.courseClassName}}
+                    </view>
+                    <view class="ques">
+                        <block wx:for="{{item.examList}}" wx:key="id">
+                            <view class="que">
+                                <view class="queTitle">
+                                    {{item.title}}
+                                </view>
+                                <view class="but">
+                                    <van-tag wx:if="{{item.status == 1}}" plain type="success">已发布</van-tag>
+                                    <view data-id="{{item.id}}" wx:if="{{item.status == 0}}" class="delect"
+                                        bindtap="delectExam">
+                                        <van-icon size="1rem" custom-style="padding:8rpx" name="cross" />
+                                    </view>
+                                    <view data-id="{{item.id}}" class="enter" bindtap="enter">
+                                        进入
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </block>
+
+            </van-collapse-item>
+        </block>
+    </van-collapse>
+</view>

@@ -1,0 +1,9 @@
+/* components/teacher/grade/grade.wxss */
+.test{
+    width: 100%;
+}
+.con{
+    width: 94%;
+    margin: 20rpx auto;
+    box-shadow: 5px 5px 3px #f8f8f8;
+}

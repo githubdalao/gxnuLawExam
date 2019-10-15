@@ -1,0 +1,44 @@
+<!--pages/teacher/me/me.wxml-->
+<view class="tabbar-con" style="height:{{contentHeight + 'px'}}">
+  <!-- 教师 -->
+  <block wx:if="{{role == 'teacher'}}">
+    <view hidden="{{active != 0}}">
+      <teacher-paper is-pull-down-refresh="{{tabBar[0].isPullDownRefresh}}"></teacher-paper>
+    </view>
+    <view hidden="{{active != 1}}">
+      <teacher-exam is-pull-down-refresh="{{tabBar[1].isPullDownRefresh}}"></teacher-exam>
+    </view>
+    <view hidden="{{active != 2}}">
+      <teacher-grade is-pull-down-refresh="{{tabBar[2].isPullDownRefresh}}"></teacher-grade>
+    </view>
+    <view hidden="{{active != 3}}">
+      <teacher-me is-pull-down-refresh="{{tabBar[3].isPullDownRefresh}}"></teacher-me>
+    </view>
+  </block>
+  <!-- 学生 -->
+  <block wx:elif="{{role == 'student'}}">
+    <view hidden="{{active != 0}}">
+      <student-course is-pull-down-refresh="{{tabBar[0].isPullDownRefresh}}"></student-course>
+    </view>
+    <view hidden="{{active != 1}}">
+      <student-me is-pull-down-refresh="{{tabBar[1].isPullDownRefresh}}"></student-me>
+    </view>
+  </block>
+  <!-- 管理员 -->
+  <block wx:elif="{{role == 'admin'}}">
+    <view hidden="{{active != 0}}">
+      <admin-home is-pull-down-refresh="{{tabBar[0].isPullDownRefresh}}"></admin-home>
+    </view>
+    <view hidden="{{active != 1}}">
+      <admin-me is-pull-down-refresh="{{tabBar[1].isPullDownRefresh}}"></admin-me>
+    </view>
+  </block>
+  <!-- 其他 -->
+  <block wx:else>页面渲染错误</block>
+</view>
+
+<!-- tab-bar -->
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item wx:for="{{tabBar}}" wx:key="{{name}}" name="{{index}}" icon="{{item.icon}}">{{item.text}}
+  </van-tabbar-item>
+</van-tabbar>

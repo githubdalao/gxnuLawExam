@@ -1,0 +1,11 @@
+<!--pages/teacher/classList/classList.wxml-->
+<view class="con">
+    <block wx:for="{{allCourse}}">
+        <view class="semitor">
+            <view class="year">{{item.openYear}} {{item.termName}}</view>
+            <block wx:for="{{item.courseList}}">
+                <view class="course">{{item.courseCName}}<text>{{item.courseNature}}</text></view>
+            </block>
+        </view>
+    </block>
+</view>

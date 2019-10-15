@@ -1,0 +1,23 @@
+/* pages/teacher/classList/classList.wxss */
+.con{
+    width: 100%;
+    
+}
+.con .semitor{
+    text-align: center;
+    width: 100%;
+    margin: 10rpx auto;
+    box-shadow: 5px 5px 3px #f8f8f8;
+}
+.con .semitor .year{
+    font-size: 1rem;
+    line-height: 80rpx;
+    border-bottom: 1px solid #f8f8f8;
+}
+.con .semitor .course{
+    font-size: 0.8rem;
+    line-height: 70rpx;
+}
+.con .semitor .course text{
+    margin-left: 30rpx;
+}

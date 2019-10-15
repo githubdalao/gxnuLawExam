@@ -1,0 +1,15 @@
+// 考试作答状态：0-未作答1-正常提交2-违规导致提交3-未作答完自动提交
+var getExamStatusText = function (status) {
+  if(status == 0){
+    return "未作答";
+  }else if(status == 1){
+    return "正常提交";
+  }else if(status == 2){
+    return "违规导致提交";
+  } else if (status == 3) {
+    return "自动提交但未完成作答";
+  }
+}
+module.exports = {
+  getExamStatusText: getExamStatusText
+};

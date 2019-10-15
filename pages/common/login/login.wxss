@@ -1,0 +1,43 @@
+/* pages/login/login.wxss */
+.cont {
+    width: 100%;
+    height: 100%;
+}
+
+.cont .login {
+    width: 100%;
+    height: 100%;
+    margin-top: 150rpx;
+    display: block;
+}
+
+.cont .login .input {
+    width: 60%;
+    height: 60rpx;
+    /* display: flex;
+    flex-direction: row; */
+    margin: 60rpx auto;
+}
+
+.cont .login .input text {
+    font-size: 0.8rem;
+    letter-spacing: 1rpx;
+    line-height: 70rpx;
+    margin: 20rpx auto;
+    color: red;
+
+}
+
+.cont .login .input input {
+    border: 1px solid #000;
+    height: 70rpx;
+    width: 100%
+}
+
+.cont .login button {
+    width: 30%;
+    margin: 50rpx auto;
+    height: 70rpx;
+    font-size: 0.8rem;
+    line-height: 70repx;
+}

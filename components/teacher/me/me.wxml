@@ -1,0 +1,45 @@
+<!--components/teacher/me/me.wxml-->
+<view class="con">
+    <view class="meList">
+        <text>头像</text>
+        <view style="width:80rpx">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+    </view>
+    <view class="meList">
+        <text>姓名</text>
+        <view>{{userMessage.teaName}}</view>
+    </view>
+    <view class="meList">
+        <text>工号</text>
+        <view>{{userMessage.teaNum}}</view>
+    </view>
+    <view class="meList">
+        <text>到勤情况</text>
+        <view>******</view>
+    </view>
+    <view class="meList" bindtap="classList">
+        <text>课程</text>
+        <view class="arrow">
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="meList" bindtap="examPubliced">
+        <text>已发布的考试</text>
+        <view class="arrow">
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="meList" bindtap="inforChange">
+        <text>修改个人信息</text>
+        <view class="arrow">
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="meList" bindtap="toMessageList">
+        <text>我的消息</text>
+        <view class="arrow">
+            <van-icon name="arrow" />
+        </view>
+    </view>
+</view>
